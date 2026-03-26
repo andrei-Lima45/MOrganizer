@@ -1,100 +1,172 @@
-# MOrganizer - Guia Simples para Iniciantes
+# MOrganizer
 
-Este guia foi feito para quem nao tem familiaridade com tecnologia.
+Sistema web de gerenciamento de tarefas com cadastro e login de usuários, organização por status e interface em estilo quadro de tarefas.
 
-## 1. O que e o MOrganizer
+## Objetivo
 
-O MOrganizer e um aplicativo para voce:
-- Anotar tarefas do dia a dia
-- Definir prazo (data e hora)
-- Acompanhar o andamento da tarefa
-- Marcar quando concluir
+Permitir que o usuário organize tarefas pessoais de forma simples e eficiente:
 
-## 2. Primeiro acesso
+- Criação, edição e exclusão de tarefas
+- Filtros e busca por texto
+- Alteração de status (A fazer, Em progresso, Concluída)
+- Drag and drop entre colunas
 
-## 👤 Usuário de teste
+## Tecnologias utilizadas
 
-Email: teste@teste.com  
-Senha: 123456
+- PHP
+- MySQL / MariaDB
+- JavaScript
+- HTML
+- CSS
 
-1. Abra o navegador.
-2. Acesse o endereco do sistema (exemplo: http://localhost/MOrganizer).
-3. Se voce ainda nao tem conta, clique em "Cadastro".
-4. Preencha nome, email e senha.
-5. Depois de cadastrar, faca login.
+## Demonstração online
 
-## 3. Tela inicial (Dashboard)
+Versão disponível para testes:
 
-Na tela inicial voce encontra os botoes principais:
-- Abrir Minhas Tarefas: abre sua lista de tarefas.
-- Criar Nova Tarefa: abre o formulario para cadastrar uma tarefa.
-- Modo escuro: alterna entre tema claro e escuro.
-- Sair: encerra sua sessao.
+- http://morganizer.infinityfreeapp.com/
 
-## 4. Como criar uma tarefa (jeito rapido)
+## Como executar localmente
 
-1. Clique em "Abrir Minhas Tarefas".
-2. No campo principal, digite o nome da tarefa.
-3. (Opcional) Preencha descricao, data e hora de vencimento.
-4. Clique em "Adicionar tarefa".
+### Requisitos
 
-Pronto. Sua tarefa aparecera na coluna "Tarefas".
+- XAMPP ou outro ambiente com Apache e MySQL/MariaDB
+- Navegador
+- phpMyAdmin
 
-## 5. Como editar uma tarefa
+### Passos
 
-1. Na lista, clique no icone de lapis (editar).
-2. Atualize os campos necessarios.
-3. Clique em "Salvar".
+1. Clone o repositório:
 
-## 6. Como mover o status da tarefa
+```bash
+git clone https://github.com/andrei-Lima45/MOrganizer.git
+```
 
-Cada tarefa pode ficar em 3 etapas:
-- Tarefas
-- Em Progresso
-- Concluidas
+2. Coloque a pasta do projeto dentro do diretório `htdocs`.
+3. Inicie o Apache e o MySQL no XAMPP.
+4. Crie um banco de dados chamado `morganizer` no phpMyAdmin.
+5. Importe o arquivo `database.sql`.
+6. Verifique as configurações do arquivo `config/db.php`.
+7. Acesse no navegador:
 
-Use os botoes:
-- "Avancar" para mover para a proxima etapa
-- "Voltar" para retornar para a etapa anterior
+- `http://localhost:8080/MOrganizer`
 
-Ou, se preferir:
-- Arraste a tarefa com o mouse e solte na coluna desejada.
-- No celular, continue usando os botoes de acao da tarefa.
+> Observação: a porta pode variar conforme a configuração do seu ambiente.
+> Em alguns casos, o acesso pode ser feito por `http://localhost/MOrganizer`.
 
-## 7. Como pesquisar e filtrar
+### Configuração de exemplo (em `config/db.php`)
 
-- Use o campo "Pesquisar tarefas" para localizar por nome.
-- Use "Filtrar por status" para ver apenas uma etapa.
+```php
+$host = getenv('DB_HOST') ?: 'localhost';
+$port = getenv('DB_PORT') ?: '3307';
+$db   = getenv('DB_NAME') ?: 'morganizer';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: '';
+```
 
-## 8. Tema claro e escuro
+## Estrutura do projeto
 
-- Clique em "Modo escuro" no topo da tela para trocar o visual.
-- Sua preferencia fica salva automaticamente no navegador.
+```
+MOrganizer/
+├── api/
+├── assets/
+├── config/
+├── css/
+├── js/
+├── cadastro.php
+├── dashboard.php
+├── database.sql
+├── editTasks.php
+├── index.php
+├── login.php
+├── logout.php
+├── tasks.php
+└── README.md
+```
 
-## 9. Como remover tarefas
+## Funcionalidades
 
-- Para remover uma tarefa: clique na lixeira.
-- Para apagar todas: clique em "Apagar todas".
+- Cadastro de usuários
+- Login e logout
+- Criação de tarefas
+- Edição de tarefas
+- Exclusão de tarefas
+- Alteração de status
+- Drag and drop entre colunas
+- Filtro por status
+- Busca por texto
+- Tema claro e escuro
+- Exibição de prazo com data e hora
 
-Atencao: exclusao nao pode ser desfeita.
+## Conta de teste
 
-## 10. Dicas para evitar erros
+- Email: `teste@teste.com`
+- Senha: `123456`
 
-- Sempre preencha pelo menos o titulo da tarefa.
-- Se algo parecer travado, atualize a pagina (F5).
-- Se aparecer mensagem de erro, tente sair e entrar novamente.
+## Guia simples de uso
 
-## 11. Perguntas frequentes
+### 1. Primeiro acesso
 
-### Esqueci minha senha. E agora?
-Atualmente o sistema nao possui recuperacao automatica de senha.
+1. Abra o navegador
+2. Acesse o sistema
+3. Caso não tenha conta, clique em **Cadastro**
+4. Preencha nome, email e senha
+5. Faça login
 
-### Posso usar no celular?
-Sim. A interface foi adaptada para funcionar em telas menores.
+### 2. Tela inicial
 
-### Preciso preencher todos os campos?
-Nao. Somente o titulo e obrigatorio.
+Na tela principal, o usuário pode:
 
----
+- Abrir a área de tarefas
+- Criar uma nova tarefa
+- Alternar entre tema claro e escuro
+- Encerrar a sessão
 
-Se precisar, peca ajuda de alguem para o primeiro uso. Depois de criar 2 ou 3 tarefas, o processo fica bem natural.
+### 3. Criar tarefa
+
+1. Abra a área de tarefas
+2. Digite o título da tarefa
+3. (Opcional) Informe descrição, data e hora
+4. Clique em **Adicionar tarefa**
+
+### 4. Editar tarefa
+
+1. Clique no botão de editar
+2. Altere os campos
+3. Salve
+
+### 5. Mover tarefas
+
+As tarefas podem ficar em:
+
+- A fazer
+- Em progresso
+- Concluída
+
+Pode mover:
+
+- Pelos botões
+- Por drag and drop
+
+### 6. Pesquisar e filtrar
+
+- Use a busca por texto
+- Use o filtro por status
+
+### 7. Remover tarefas
+
+- Clique no botão de lixeira
+- Ou apague todas
+
+## Observações
+
+- O título é obrigatório
+- Recarregue a página se travar
+- Exclusão não pode ser desfeita
+
+## Projeto
+
+Projeto acadêmico
+
+## Autor
+
+- Andrei Lima
