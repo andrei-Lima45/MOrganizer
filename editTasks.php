@@ -15,7 +15,7 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>MOrganizer | Editar Tarefa</title>
 </head>
 <body>
@@ -84,7 +84,7 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
         <p class="msg" id="editInfoMsg" role="status" aria-live="polite"></p>  
     </section>
 </main>
-<script src="ui.js"></script>
-<script src="script.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

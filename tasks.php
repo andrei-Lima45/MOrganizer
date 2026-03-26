@@ -15,7 +15,7 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>MOrganizer | Tarefas</title>
 </head>
 <body>
@@ -126,7 +126,7 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
     </div>
     </section>
 </main>
-<script src="ui.js"></script>
-<script src="script.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

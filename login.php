@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/config/db.php';
 
 
 $error = '';
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="css/styles.css" />
 <title>MOrganizer | Login</title>
 </head>
 <body>
@@ -97,6 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p class="mt-sm">Não tem conta? <a href="cadastro.php" class="link-accent">Cadastre-se</a></p>
   </section>
 </main>
-<script src="ui.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>

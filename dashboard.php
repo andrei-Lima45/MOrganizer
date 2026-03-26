@@ -30,7 +30,7 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="css/styles.css" />
 <title>MOrganizer | Dashboard</title>
 </head>
 <body>
@@ -82,6 +82,6 @@ $userName = htmlspecialchars($userName, ENT_QUOTES, 'UTF-8');
     <p class="helper-text">Dica: se esquecer algo, você pode editar a tarefa depois no ícone de lápis.</p>
   </section>
 </main>
-<script src="ui.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>

@@ -12,6 +12,11 @@ O MOrganizer e um aplicativo para voce:
 
 ## 2. Primeiro acesso
 
+## 👤 Usuário de teste
+
+Email: teste@teste.com  
+Senha: 123456
+
 1. Abra o navegador.
 2. Acesse o endereco do sistema (exemplo: http://localhost/MOrganizer).
 3. Se voce ainda nao tem conta, clique em "Cadastro".

@@ -2,7 +2,7 @@
 function getPDO()
 {
     // Configurações do banco de dados
-    $host = getenv('DB_HOST') ?: '127.0.0.1';
+    $host = getenv('DB_HOST') ?: 'localhost';
     $port = getenv('DB_PORT') ?: '3307';
     $db   = getenv('DB_NAME') ?: 'morganizer';
     $user = getenv('DB_USER') ?: 'root';

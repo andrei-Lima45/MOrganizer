@@ -14,7 +14,7 @@
 session_start();
 
 // Importa conexão com banco de dados
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/config/db.php';
 
 // Tenta criar tabela de usuários (se não existir)
 try {
@@ -30,6 +30,9 @@ $success = '';
 /**
  * Processa formulário de registro se submetido via POST
  */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Extrai dados do formulário
     $nome = trim($_POST['nome'] ?? '');
@@ -75,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
         <title>MOrganizer | Cadastro</title>
 </head>
 <body>
@@ -146,6 +149,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p style="margin-top:12px">Já tem conta? <a href="login.php" style="color:var(--accent);text-decoration:none">Faça login</a></p>
         </section>
     </main>
-<script src="ui.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>
